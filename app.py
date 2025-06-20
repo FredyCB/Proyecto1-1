@@ -67,7 +67,6 @@ def main():
     print(f"Carro 2: {carro2.marca} {carro2.modelo} - Matrícula: {matricula2.numero}")
     print(f"Carro 3: {carro3.marca} {carro3.modelo} - Matrícula: {matricula3.numero}")
     print("==================================")
-    print("¡Relaciones 1:1 establecidas correctamente!")
 
 if __name__ == "__main__":
     main()
