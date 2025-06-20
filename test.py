@@ -38,11 +38,11 @@ class TestModelo1a1(unittest.TestCase):
         carro.matricula_id = ObjectId(matricula_id)
         carro.save(self.db)
         
-        # Verificar relaciones
+       # relacion entre los ids
         carro_recuperado = self.db.carros.find_one({"_id": ObjectId(carro_id)})
         matricula_recuperada = self.db.matriculas.find_one({"_id": ObjectId(matricula_id)})
         
-        # Comprobaciones 1:1
+       # relacion carro matricula
         self.assertEqual(str(matricula_recuperada["carro_id"]), carro_id)
         self.assertEqual(str(carro_recuperado["matricula_id"]), matricula_id)
         
